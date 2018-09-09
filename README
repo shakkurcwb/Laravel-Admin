@@ -1,0 +1,10 @@
+ If you use Apache add this to the .htaccess file :
+
+ RewriteEngine On
+
+ RewriteCond %{HTTP:Authorization} ^(.*)
+
+ RewriteRule .* - [e=HTTP_AUTHORIZATION:%1]
+
+--
+
